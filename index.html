@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- jQuery UI CSS (твої файли) -->
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+
+  <!-- Owl Carousel CSS (твої файли) -->
+  <link rel="stylesheet" href="plugins/owlcarousel/owl.carousel.css">
+  <link rel="stylesheet" href="plugins/owlcarousel/owl.theme.default.css">
+
+  <!-- UniteGallery CSS -->
+  <link rel="stylesheet" href="unitegallery/css/unite-gallery.css">
+
+  <!-- Magnific Popup CSS (додай файл у цю папку) -->
+  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+
+  <!-- Твій стиль ОСТАННІМ -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Навігація -->
+  <header class="topbar">
+    <div class="container topbar__row">
+      <div class="brand">
+        <span class="brand__dot"></span>
+        <span class="brand__name">ЛР №7 Мазурик Софії </span>
+      </div>
+
+      <nav class="nav">
+        <a href="#ui" class="nav__link">Інтерактив</a>
+        <a href="#slider" class="nav__link">Слайдер</a>
+        <a href="#gallery" class="nav__link">Галерея</a>
+        <a href="#zoom" class="nav__link">Zoom</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+
+        <!-- Лівий блок: календар + повзунок -->
+        <div class="hero__text card">
+          <h1>Природа</h1>
+          <p class="lead">
+            Ліс, гори та вода — три прості речі, які повертають відчуття спокою.
+          </p>
+
+          <!-- Datepicker -->
+          <div class="form">
+            <label for="tripDate" class="label">Обери дату прогулянки:</label>
+            <input id="tripDate" class="input" type="text" placeholder="Натисни, щоб відкрити календар">
+            <div class="mini-hint">Календар показує одразу 2 місяці.</div>
+          </div>
+
+          <!-- Slider -->
+          <div class="sliderbox">
+            <div class="sliderbox__top">
+              <h3>Рівень спокою</h3>
+              <div class="chip"><span id="calmValue">50</span>%</div>
+            </div>
+            <div id="calmSlider"></div>
+            <div class="mini-hint">Пересунь повзунок і подивись зміну значення.</div>
+          </div>
+        </div>
+
+        <!-- Правий блок: Accordion -->
+        <section id="ui" class="card">
+          <h2 class="section-title">Питання і відповіді (Accordion)</h2>
+
+          <div id="accordionBlock">
+            <h3>Чому прогулянка в природі швидко “перезавантажує”?</h3>
+            <div>
+              <p>
+                Бо зменшується кількість подразників: менше шуму, менше екранів, більше рівного світла та природних
+                звуків.
+                Організм швидше розслабляється, а думки стають спокійнішими.
+              </p>
+            </div>
+
+            <h3>Що взяти з собою, щоб було комфортно?</h3>
+            <div>
+              <p>
+                Вода, легкий перекус, зручне взуття та один додатковий шар одягу.
+                Якщо сонячно — окуляри або кепка, якщо прохолодно — тонкий шарф/баф.
+              </p>
+            </div>
+
+            <h3>Еко-правило, яке легко виконувати завжди</h3>
+            <div>
+              <p>
+                Забирай із собою все, що приніс(ла). Якщо бачиш дрібне сміття поруч — забери ще один маленький папірець.
+                Так місце залишиться красивим і для інших.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- Слайдер (Owl Carousel) — ОКРЕМО, ПЕРЕД UniteGallery -->
+    <section id="slider" class="container">
+      <div class="card">
+        <h2 class="section-title">Слайдер (Owl Carousel)</h2>
+
+        <!-- Маленькі картинки: кілька одночасно -->
+        <div class="owl-carousel owl-theme owl-small" id="natureCarousel">
+          <div class="slide">
+            <img src="img/hero-1.jpg" alt="Гори">
+            <div class="slide__cap">Гори</div>
+          </div>
+          <div class="slide">
+            <img src="img/hero-2.jpg" alt="Ліс">
+            <div class="slide__cap">Ліс</div>
+          </div>
+          <div class="slide">
+            <img src="img/hero-3.jpg" alt="Озеро">
+            <div class="slide__cap">Озеро</div>
+          </div>
+          <div class="slide">
+            <img src="img/hero-4.jpg" alt="Квіти">
+            <div class="slide__cap">Квіти</div>
+          </div>
+          <div class="slide">
+            <img src="img/hero-5.jpg" alt="Світанок">
+            <div class="slide__cap">Світанок</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UniteGallery -->
+    <section id="gallery" class="container">
+      <div class="card">
+        <h2 class="section-title">Галерея (UniteGallery)</h2>
+
+        <div id="galleryTiles" style="display:none;">
+          <img alt="Ліс" src="img/gallery-1.jpg" data-image="img/gallery-1.jpg" data-description="Тиша і зелень">
+          <img alt="Річка" src="img/gallery-2.jpg" data-image="img/gallery-2.jpg" data-description="Вода заспокоює">
+          <img alt="Гори" src="img/gallery-3.jpg" data-image="img/gallery-3.jpg" data-description="Свіже повітря">
+          <img alt="Озеро" src="img/gallery-4.jpg" data-image="img/gallery-4.jpg" data-description="Світло і спокій">
+          <img alt="Квіти" src="img/gallery-5.jpg" data-image="img/gallery-5.jpg" data-description="Ніжні кольори">
+          <img alt="Туман" src="img/gallery-6.jpg" data-image="img/gallery-6.jpg" data-description="Мʼякий ранок">
+          <img alt="Світанок" src="img/gallery-7.jpg" data-image="img/gallery-7.jpg" data-description="Нове відчуття">
+          <img alt="Захід" src="img/gallery-8.jpg" data-image="img/gallery-8.jpg" data-description="Тепла тиша">
+        </div>
+
+        <div class="mini-hint">Клікни на фото — відкриється перегляд і гортання.</div>
+      </div>
+    </section>
+
+    <!-- Zoom-gallery (Magnific Popup) — ПІСЛЯ UniteGallery -->
+    <section id="zoom" class="container">
+      <div class="card">
+        <h2 class="section-title">Zoom-gallery (Magnific Popup)</h2>
+
+        <!-- ПЛЕЙСХОЛДЕР: поки можеш використати ці самі картинки.
+             Потім просто заміниш href/src на свої -->
+        <div class="zoom-gallery">
+          <a href="img/hero-11.jpg" title="Схід" data-source="img/hero-11.jpg">
+            <img src="img/hero-11.jpg" alt="Схід">
+          </a>
+          <a href="img/hero-12.jpg" title="Краєвид" data-source="img/hero-12.jpg">
+            <img src="img/hero-12.jpg" alt="Краєвид">
+          </a>
+          <a href="img/hero-13.jpg" title="Захід" data-source="img/hero-13.jpg">
+            <img src="img/hero-13.jpg" alt="Захід">
+          </a>
+          <a href="img/hero-14.jpg" title="Море" data-source="img/hero-14.jpg">
+            <img src="img/hero-14.jpg" alt="Море">
+          </a>
+        </div>
+
+        <div class="mini-hint">Клікни на мініатюру — відкриється фото з zoom і гортанням.</div>
+      </div>
+    </section>
+<section class="container">
+  <div class="card">
+    <h2 class="section-title">Відео (Popup)</h2>
+
+    <p>
+      <a class="popup-youtube" href="https://www.youtube.com/embed/BHACKCNDMW8">
+        ▶ Переглянути відео про природу
+      </a>
+    </p>
+  </div>
+</section>
+  </main>
+
+   </footer>
+
+  <!-- JS (порядок важливий!) -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+
+  <script src="plugins/owlcarousel/owl.carousel.js"></script>
+
+  <script src="unitegallery/js/unitegallery.min.js"></script>
+  <script src="unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+
+  <!-- Magnific Popup JS (додай файл у цю папку) -->
+  <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+ <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

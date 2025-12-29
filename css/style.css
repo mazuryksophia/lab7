@@ -1,0 +1,414 @@
+:root {
+  --bg1: #faf6ff;
+  --bg2: #f2e9ff;
+  --card: rgba(255, 255, 255, 0.82);
+  --border: rgba(124, 58, 237, 0.18);
+
+  --text: #2b163f;
+  --muted: rgba(43, 22, 63, 0.70);
+
+  --violet: #a855f7;
+  --violet2: #7c3aed;
+  --violet3: #c084fc;
+
+  --shadow: 0 14px 30px rgba(55, 25, 90, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(900px 600px at 20% 10%, rgba(168, 85, 247, 0.18), transparent 60%),
+    radial-gradient(900px 600px at 80% 30%, rgba(124, 58, 237, 0.14), transparent 65%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(250, 246, 255, 0.78);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.topbar__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+}
+
+.brand__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--violet), var(--violet2));
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.35);
+}
+
+.brand__name {
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+}
+
+.nav__link:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.12);
+}
+
+.hero {
+  padding: 22px 0 16px;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.15;
+}
+
+.lead {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.label {
+  display: block;
+  margin: 12px 0 6px;
+  color: var(--muted);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(124, 58, 237, 0.20);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text);
+  outline: none;
+}
+
+.input:focus {
+  border-color: rgba(124, 58, 237, 0.45);
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.14);
+}
+
+.mini-hint {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.sliderbox {
+  margin-top: 14px;
+}
+
+.sliderbox__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sliderbox h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 58, 237, 0.20);
+  background: rgba(168, 85, 247, 0.10);
+  font-weight: 700;
+}
+
+/* Owl carousel */
+.slide img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(124, 58, 237, 0.16);
+}
+
+.slide__cap {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 16px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(124, 58, 237, 0.12);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.footer__small {
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slide img {
+    height: 260px;
+  }
+}
+
+/* --- jQuery UI під ніжну тему --- */
+.ui-widget {
+  font-family: inherit;
+}
+
+.ui-widget-content {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  color: var(--text);
+}
+
+.ui-widget-header {
+  background: rgba(168, 85, 247, 0.14);
+  border: 1px solid rgba(124, 58, 237, 0.20);
+  color: var(--text);
+}
+
+.ui-state-active {
+  background: rgba(168, 85, 247, 0.22) !important;
+  border-color: rgba(124, 58, 237, 0.35) !important;
+}
+
+.ui-state-default {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+}
+
+.ui-state-hover {
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+
+.chip {
+  min-width: 56px;
+  text-align: center;
+}
+
+.owl-small .slide img {
+  width: 100%;
+  height: 160px;
+  /* ← ОЦЕ зменшує “дуже сильно” */
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(124, 58, 237, 0.16);
+}
+
+@media (max-width: 900px) {
+  .owl-small .slide img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 520px) {
+  .owl-small .slide img {
+    height: 140px;
+  }
+}
+
+.owl-small .slide__cap {
+  margin-top: 8px;
+  color: rgba(43, 22, 63, 0.70);
+  font-size: 13px;
+}
+
+/* Стрілки Owl */
+.owl-theme .owl-nav [class*="owl-"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  color: #2b163f !important;
+  border-radius: 999px;
+  padding: 8px 12px !important;
+  box-shadow: 0 10px 18px rgba(124, 58, 237, 0.10);
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 12px 22px rgba(124, 58, 237, 0.14);
+}
+
+/* Крапки Owl */
+.owl-theme .owl-dots .owl-dot span {
+  background: rgba(124, 58, 237, 0.20) !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: rgba(124, 58, 237, 0.55) !important;
+}
+
+/* ====== UniteGallery text panel (щоб було гарно) ====== */
+.ug-textpanel-title,
+.ug-textpanel-description {
+  color: #fff !important;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* ====== Zoom-gallery (Magnific Popup) ====== */
+.zoom-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.zoom-gallery a {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(124, 58, 237, 0.16);
+  box-shadow: 0 10px 18px rgba(124, 58, 237, 0.08);
+}
+
+.zoom-gallery img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  transition: transform 180ms ease;
+}
+
+.zoom-gallery a:hover img {
+  transform: scale(1.03);
+}
+
+.image-source-link {
+  color: #6b46c1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  .zoom-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Fade transition (як у прикладі) */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

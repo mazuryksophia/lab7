@@ -1,0 +1,43 @@
+/* NatureViolet theme add-on for jQuery UI (small overrides). */
+:root{--nv-violet:#a855f7;--nv-violet2:#7c3aed;--nv-violet3:#c084fc;--nv-border:rgba(168,85,247,.45);}
+
+.ui-widget-header{
+  background: rgba(168,85,247,0.14) !important;
+  border-color: var(--nv-border) !important;
+  color: rgba(255,255,255,.9) !important;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active{
+  background: rgba(168,85,247,0.22) !important;
+  border-color: rgba(168,85,247,0.55) !important;
+  color: rgba(255,255,255,.92) !important;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover{
+  border-color: rgba(168,85,247,0.55) !important;
+}
+
+.ui-button,
+.ui-button.ui-state-default{
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+.ui-slider .ui-slider-handle{
+  border-color: rgba(168,85,247,0.65) !important;
+  background: rgba(168,85,247,0.30) !important;
+}
+.ui-slider .ui-slider-range{
+  background: rgba(168,85,247,0.25) !important;
+}
+
+.ui-tooltip{
+  background: rgba(15,11,22,0.92) !important;
+  border: 1px solid rgba(168,85,247,0.45) !important;
+  color: rgba(255,255,255,.92) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.35) !important;
+}
